@@ -6,6 +6,7 @@ let res = $.get({
 }).responseText;
 //parsing sting into json object
 const news = JSON.parse(res);
+console.log(news);
 //this fuction will create all news cards
 const newsCard = () => {
   let newsList = "";
@@ -27,7 +28,7 @@ const newsCard = () => {
               ${newss.text}
               </p>
               <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">Last updated ${newss.time} mins ago</small>
               </p>
             </div>
           </div>
